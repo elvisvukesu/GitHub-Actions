@@ -1,0 +1,27 @@
+name: Java-Simple CI 
+
+on: [push]
+
+jobs:
+  part-one:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: test echo
+        run: echo $ECHO
+      - name: test two commands
+        run: |
+          pwd
+          whoami
+
+  part-two:
+    runs-on: ubuntu-latest
+    steps: 
+      # This keyword checks out the code in the current repo so that the job can access it. 
+      - uses: actions/checkout@v3
+
+      - name: the shell 
+        run: echo $ECHO
+      - name: wkdir & user 
+        run: |
+          pwd
+          whoami
