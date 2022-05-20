@@ -19,9 +19,9 @@ jobs:
       # This keyword checks out the code in the current repo so that the job can access it. 
       - uses: actions/checkout@v3
 
-      - name: 
+      - name: the shell 
         run: echo $ECHO
-      - name:
+      - name: wkdir & user 
         run: |
           pwd
           whoami
