@@ -1,0 +1,29 @@
+name: Java-Simple CI 
+
+on: [push]
+
+  workflow_dispatch:
+
+jobs:
+  part-one:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: 
+        run: echo $ECHO
+      - name:
+        run: |
+          pwd
+          whoami
+
+  part-two:
+    runs-on: ubuntu-latest
+    steps: 
+      # This keyword checks out the code in the current repo so that the job can access it. 
+      - uses: actions/checkout@v3
+
+      - name: 
+        run: echo $ECHO
+      - name:
+        run: |
+          pwd
+          whoami

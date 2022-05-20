@@ -1,0 +1,23 @@
+# Each workflow must have a name
+name: Test Workflow 1
+
+# This workflow is triggered when code is pushed to the master branch specifically
+# We can also trigger a workflow for other events such as pull request by substituting push with pull_request
+# It is possible to have more than one trigger i.e. push and pull request
+on:
+  push:
+    branches: [ master ]
+  
+  # This tag allows the workflow to be ran from the Actions tab
+  workflow_dispatch:
+
+jobs: 
+  run-shell-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: one step
+        run: echo "Welcome to github actions"
+      - name: multi step 
+        run: |
+          pwd
+          whoami

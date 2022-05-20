@@ -1,0 +1,24 @@
+# Each workflow must have a name
+name: Test Workflow 1
+# This workflow is triggered when code is pushed to any branch of the repository
+on: [push]
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs: 
+  # This workflow runs a single job called run-shell commands
+  run-shell-commands:
+    # This defines the environment on which the job will run
+    runs-on: ubuntu-latest
+    # Steps represents a sequence of tasks to be peformed in this run
+    steps:
+      # Each step can have a name and a series of commands. This step has a one line script.
+      - name: one command step
+        run: echo "Welcome to github actions"
+      # This step has a multi line script.
+      - name: multi command step 
+        run: |
+          pwd
+          whoami
+          echo $SHELL
+
+
+      
