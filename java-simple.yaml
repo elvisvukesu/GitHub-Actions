@@ -2,8 +2,6 @@ name: Java-Simple CI
 
 on: [push]
 
-  workflow_dispatch:
-
 jobs:
   part-one:
     runs-on: ubuntu-latest
